@@ -1,0 +1,30 @@
+# Ignore everything
+/*
+
+# Editor Project Files
+.vscode
+.idea
+
+# Track the ignore
+!.gitignore
+!README.md
+
+# Everything but wp-content
+!wp-content
+wp-content/*
+
+# Ignore all must use plugins except specified ones
+!wp-content/mu-plugins
+wp-content/mu-plugins/*
+!wp-content/plugins/my-mu-plugin
+
+# Ignore all plugins except specified ones
+!wp-content/plugins
+wp-content/plugins/*
+!wp-content/plugins/my-plugin
+
+# Ignore all themes except specified ones
+!wp-content/themes
+wp-content/themes/*
+!wp-content/themes/sspa2021
+wp-content/themes/sspa2021/node_modules

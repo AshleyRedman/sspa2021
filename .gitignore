@@ -16,6 +16,7 @@ wp-content/*
 # Ignore all must use plugins except specified ones
 !wp-content/mu-plugins
 wp-content/mu-plugins/*
+!wp-content/mu-plugins/.gitkeep
 !wp-content/plugins/my-mu-plugin
 
 # Ignore all plugins except specified ones

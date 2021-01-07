@@ -1,0 +1,7 @@
+{% if socket_menu %}
+	{% for item in socket_menu.items  %}
+		<a href="{{ item.link }}" class="{{ item.classes | join(' ') }}" target="{{ item.target }}">
+			<small>{{ item.title }}</small>
+		</a>
+	{% endfor %}
+{% endif %}

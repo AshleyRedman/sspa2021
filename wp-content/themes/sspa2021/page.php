@@ -18,7 +18,7 @@ use Timber\Timber;
 
 class PageController extends Controller
 {
-    public function handle()
+    public function handle() : TimberResponse
     {
         $context = Timber::get_context();
         $page = new Page();
@@ -27,6 +27,9 @@ class PageController extends Controller
         $context['title'] = $page->title;
         $context['content'] = $page->content;
 
-        return new TimberResponse('templates/generic-page.twig', $context);
+        return new TimberResponse([
+            'page/' . $page->slug . '.twig',
+            'templates/generic-page.twig'
+        ], $context, 200);
     }
 }

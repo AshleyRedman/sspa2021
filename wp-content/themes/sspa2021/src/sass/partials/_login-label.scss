@@ -1,0 +1,12 @@
+.login-label {
+  font-size: var(--sm);
+  color: var(--white) !important;
+
+  &-blue {
+    color: var(--sspa-blue) !important;
+  }
+
+  &:hover {
+    color: var(--sspa-blue) !important;
+  }
+}

@@ -28,7 +28,7 @@ class Handler extends LumberjackHandler
                 $data = Timber::get_context();
                 $data['exception'] = $e;
 
-                return new TimberResponse('templates/errors/whoops.twig', $data, 500);
+                return new TimberResponse('errors/whoops.twig', $data, 500);
             }
         } catch (Exception $customRenderException) {
             // Something went wrong in the custom renderer, log it and show the default rendering

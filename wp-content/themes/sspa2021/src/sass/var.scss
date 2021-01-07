@@ -1,0 +1,53 @@
+$colors: (
+    'sspa-black': #2C3841,
+    'sspa-grey': #2e2e2e,
+    'sspa-blue': #1c97c4,
+    'sspa-off-white': #F7F7F7,
+    'black': #000000,
+    'white': #FFFFFF,
+);
+$fontSizes: (
+    'xsm': '12px',
+    'sm': '14px',
+    'base': '16px',
+    'md': '18px',
+    'lg': '21px',
+    'xlg': '28px',
+    'xxxlg': '36px',
+    'xxxxlg': '45px',
+);
+$values: (
+    'Roboto': 'Roboto, sans-serif',
+    'sc-sm': '640px',
+    'sc-md': '768px',
+    'sc-lg': '1024px',
+    'sc-xl': '1280px',
+    'sc-xxl': '1440px',
+);
+
+:root {
+    @each $name, $color in $colors {
+        --#{$name}: #{$color};
+
+        .has-#{$name}-color {
+            color: $color !important;
+        }
+        
+        .has-#{$name}-background-color {
+            background-color: $color !important;
+        }  
+    }
+    @each $name, $size in $fontSizes {
+        --#{$name}: #{$size};
+
+        .has-#{$name}-font-size {
+            font-size: #{$size} !important;
+        }
+    }
+    @each $name, $value in $values {
+        --#{$name}: #{$value};
+    }
+}
+
+.has-text-color {/**/}
+.has-background {/**/}

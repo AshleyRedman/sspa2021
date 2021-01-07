@@ -1,0 +1,154 @@
+html.site,
+.interface-interface-skeleton__content {
+
+	::selection {
+		color: var(--white);
+		background: var(--sspa-blue);
+	}
+
+    .sspa2021,
+	.editor-styles-wrapper {
+		font-family: var(--Roboto);
+	}
+
+    .editor-styles-wrapper h1,
+    .editor-styles-wrapper h2,
+    .editor-styles-wrapper h3,
+	.editor-styles-wrapper h4,
+	.editor-styles-wrapper h5,
+	.editor-styles-wrapper h6 {
+		margin: 0 auto 1rem auto;
+	}
+
+    .editor-styles-wrapper h1,
+    .sspa2021 h1,
+    .editor-styles-wrapper h2,
+    .sspa2021 h2,
+    .editor-styles-wrapper h3,
+    .sspa2021 h3,
+    .editor-styles-wrapper h4,
+    .sspa2021 h4,
+    .editor-styles-wrapper h5,
+    .sspa2021 h5,
+    .editor-styles-wrapper h6,
+    .sspa2021 h6,
+    .editor-styles-wrapper p,
+    .sspa2021 p,
+    .editor-styles-wrapper li,
+    .sspa2021 li {
+		color: var(--sspa-grey);
+	}
+
+    .editor-styles-wrapper h1,
+    .sspa2021 h1 {
+		font-size: var(--xxxxlg);
+		font-weight: 500;
+		letter-spacing: normal;
+		text-transform: initial;
+	}
+
+	.editor-styles-wrapper h2,
+	.sspa2021 h2 {
+		font-size: var(--xxxlg);
+		font-weight: 400;
+		letter-spacing: normal;
+		text-transform: initial
+	}
+
+	.editor-styles-wrapper h3,
+	.sspa2021 h3 {
+		font-size: var(--xxlg);
+		font-weight: 400;
+		line-height: 1.5;
+		letter-spacing: normal;
+		text-transform: initial;
+		font-style: italic;
+	}
+
+	.editor-styles-wrapper h4,
+	.sspa2021 h4 {
+		font-size: var(--xlg);
+		font-weight: 400;
+		letter-spacing: 2px;
+		text-transform: initial;
+	}
+
+	.editor-styles-wrapper h5,
+	.editor-styles-wrapper h6,
+	.sspa2021 h5,
+	.sspa2021 h6 {
+		font-size: var(--lg);
+		font-weight: 400;
+		letter-spacing: 1.6px;
+		text-transform: initial;
+	}
+
+	.editor-styles-wrapper p,
+	.sspa2021 p {
+		font-size: var(--base);
+		font-weight: 400;
+		line-height: 24pt;
+		letter-spacing: normal;
+	}
+
+	.editor-styles-wrapper a,
+	.sspa2021 a {
+		color: var(--sspa-blue);
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.editor-styles-wrapper ul,
+	.editor-styles-wrapper ol,
+	.sspa2021 ul,
+	.sspa2021 ol {
+		li {
+			font-size: var(--base);
+			font-weight: 400;
+			line-height: 24pt;
+			letter-spacing: normal;
+		}
+	}
+
+	input,
+	select,
+	.select2-container--default .select2-selection--single {
+		padding: 0.5rem;
+		border: 1px solid var(--sspa-grey);
+		border-radius: 0;
+		height: auto;
+
+		&:focus {
+			border-color: var(--sspa-blue);
+		}
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		line-height: initial;
+	}
+
+	fieldset {
+		margin: 2rem 0;
+	}
+
+	figure {
+		margin: 0;
+	}
+
+	.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
+	.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,
+	.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+		font-size: var(--base);
+		line-height: 1.15;
+		padding: 0.5rem 1rem;
+		border-radius: 0;
+		background-color: var(--sspa-blue);
+		color: var(--white);
+	}
+
+	.woocommerce #content table.cart td.actions .input-text, .woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, .woocommerce-page table.cart td.actions .input-text {
+		width: auto;
+		line-height: 1.15;
+		padding: 0.45rem !important;
+	}
+}

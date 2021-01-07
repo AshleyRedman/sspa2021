@@ -21,8 +21,11 @@ use Timber\Timber;
  */
 class Error404Controller extends Controller
 {
-    public function handle()
+    public function handle() : TimberResponse
     {
-        return new TimberResponse('templates/errors/404.twig', Timber::get_context(), 404);
+        return new TimberResponse(
+            'errors/404.twig',
+            Timber::get_context(),
+            404);
     }
 }

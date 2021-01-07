@@ -1,0 +1,20 @@
+.container {
+	margin: auto;
+	padding: 0 1rem;
+
+	@media only screen and (min-width: 640px) {
+		max-width: var(--sc-sm);
+	}
+	@media only screen and (min-width: 768px) {
+		max-width: var(--sc-md);
+	}
+	@media only screen and (min-width: 1024px) {
+		max-width: var(--sc-lg);
+	}
+	@media only screen and (min-width: 1280px) {
+		max-width: var(--sc-xl);
+	}
+	@media only screen and (min-width: 1440px) {
+		max-width: var(--sc-xxl);
+	}
+}

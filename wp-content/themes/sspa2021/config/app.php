@@ -52,6 +52,7 @@ return [
 
     'themeSupport' => [
         'post-thumbnails',
+        'woocommerce',
     ],
 
     /**

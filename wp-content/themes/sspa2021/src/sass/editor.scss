@@ -1,0 +1,13 @@
+.wp-block {
+	max-width: 1280px;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align='wide'] {
+	max-width: none;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align='full'] {
+	max-width: none;
+}

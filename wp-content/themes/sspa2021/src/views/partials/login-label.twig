@@ -1,0 +1,18 @@
+<div>
+	{% if is_logged_in and user_account_url %}
+		<a href="{{ user_account_url }}" class="login-label">
+			My Account ({{ user.display_name }})
+		</a>
+		{% if cart_count %}
+			<a href="{{ cart_url }}" class="login-label login-label-blue">
+				<i class="fas fa-shopping-cart"></i>
+				({{ cart_count }})
+			</a>
+		{% endif %}
+	{% else %}
+		<a href="{{ user_account_url }}" class="login-label">
+			<i class="fas fa-home"></i>
+			Log In
+		</a>
+	{% endif %}
+</div>

@@ -1,0 +1,32 @@
+.single-product-details {
+  display: grid;
+  grid-template-columns: 100%;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.woocommerce-product-gallery__wrapper {
+  .woocommerce-product-gallery__image:first-child {
+
+  }
+}
+
+.woocommerce-product-gallery__image {
+  display: inline-block;
+
+  &:first-child {
+    display: block;
+    margin: 0 0 1rem 0;
+  }
+
+  >a {
+    display: block;
+  }
+
+  .wp-post-image {
+    display: block;
+    margin: auto;
+  }
+}

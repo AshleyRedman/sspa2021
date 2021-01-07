@@ -19,9 +19,15 @@ class SingleController extends Controller
         $post = new Post();
 
         $context['post'] = $post;
-        $context['title'] = $post->title;
-        $context['content'] = $post->content;
 
-        return new TimberResponse('templates/generic-page.twig', $context);
+        if ( post_password_required( $post->ID ) ) {
+            return new TimberResponse('templates/single-password.twig', $context, '200');
+        } else {
+            return new TimberResponse([
+                'single-' . $post->ID . '.twig',
+                $post->post_type . '/single.twig',
+                'templates/single.twig'
+            ], $context);
+        }
     }
 }

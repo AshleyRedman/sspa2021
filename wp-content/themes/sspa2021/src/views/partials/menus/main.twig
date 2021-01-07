@@ -1,0 +1,25 @@
+{% if main_menu %}
+	<nav>
+		<ul class="menu">
+		{% for item in main_menu.items  %}
+			<li class="menu-parent">
+				<a href="{{ item.link }}" class="{{ item.classes | join(' ') }}" target="{{ item.target }}">
+					<span>{{ item.title }}</span>
+				</a>
+
+				{% if item.children is not empty %}
+					<ul class="menu dropdown">
+						{% for child in item.children  %}
+							<li class="menu-parent">
+								<a href="{{ child.link }}" class="{{ child.classes | join(' ') }}" target="{{ child.target }}">
+									<span>{{ child.title }}</span>
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</li>
+		{% endfor %}
+		</ul>
+	</nav>
+{% endif %}

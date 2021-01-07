@@ -18,7 +18,7 @@ use Timber\Timber;
 
 class ArchiveController extends Controller
 {
-    public function handle()
+    public function handle() : TimberResponse
     {
         $data = Timber::get_context();
         $data['title'] = 'Archive';
@@ -40,6 +40,9 @@ class ArchiveController extends Controller
         // TODO: Currently only works for posts, fix for custom post types
         $data['posts'] = Post::query();
 
-        return new TimberResponse('templates/posts.twig', $data);
+//        dump($data);
+//        die();
+
+        return new TimberResponse('templates/posts.twig', $data, 200);
     }
 }

@@ -1,0 +1,67 @@
+{% extends "layouts/app.twig" %}
+
+{% block content %}
+
+	<section class="container">
+		<h1>{{ class.title }}</h1>
+	</section>
+
+	<section class="container">
+		<img src="{{ class.thumbnail.src|resize(972, 327) }}" alt="{{ class.thumbnail.alt }}">
+
+		<p>{{ class.description }}</p>
+	</section>
+
+	<section class="container">
+		{% if class.key_information is not empty %}
+			<h2>Key Information</h2>
+			<ul>
+				{% for item in class.key_information %}
+					<li>
+						<i class="{{ item.information_icon.value }}"></i>
+						<p>{{ item.information_content }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</section>
+
+	<section class="container">
+		{% if class.session_focus is not empty %}
+			<h2>Session Focus</h2>
+			<ul>
+				{% for item in class.session_focus %}
+					<li>
+						<span title="{{ item.focus_icon.label }}">{{ item.focus_icon.value }}</span>
+						<h3>{{ item.focus_title}}</h3>
+						<p>{{ item.focus_content }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</section>
+
+	<section class="container">
+		{% if class.course_information is not empty %}
+			<h2>Course Information</h2>
+			<ul>
+				{% for item in class.course_information %}
+					<li>
+						<span title="{{ item.information_icon.label }}">{{ item.information_icon.value }}</span>
+						<h3>{{ item.information_title }}</h3>
+						<p>{{ item.information_content }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</section>
+
+	<section class="container">
+		<h2>Enrolment options</h2>
+	</section>
+
+	<section>
+		<h2>Need help choosing an option?</h2>
+	</section>
+
+{% endblock %}

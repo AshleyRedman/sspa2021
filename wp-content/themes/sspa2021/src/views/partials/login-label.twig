@@ -4,11 +4,14 @@
 			My Account ({{ user.display_name }})
 		</a>
 		{% if cart_count %}
-			<a href="{{ cart_url }}" class="login-label login-label-blue">
+			<a href="{{ cart_url }}" class="cart-icon">
 				<i class="fas fa-shopping-cart"></i>
 				({{ cart_count }})
 			</a>
 		{% endif %}
+		<a href="" class="burger">
+			|||
+		</a>
 	{% else %}
 		<a href="{{ user_account_url }}" class="login-label">
 			<i class="fas fa-home"></i>

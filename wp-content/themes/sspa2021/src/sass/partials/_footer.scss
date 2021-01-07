@@ -2,6 +2,25 @@
   background-color: var(--sspa-off-white);
 
   .socket {
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      small {
+        display: block;
+        text-align: center;
+      }
+
+      .menu-item {
+        margin-top: 1rem;
+      }
+    }
+
+    a.menu-item {
+      display: flex;
+      padding: 0;
+    }
+
     small {
       color: var(--sspa-off-white);
     }

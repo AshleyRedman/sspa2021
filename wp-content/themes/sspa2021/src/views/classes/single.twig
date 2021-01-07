@@ -3,43 +3,79 @@
 {% block content %}
 
 	<section class="container">
-		<h1>{{ class.title }}</h1>
+		<div class="single-class__heading">
+			<h1>{{ class.title }}</h1>
+			<a href="mailto:info@ssperforimingarts.co.uk">
+				<i class="fas fa-envelope"></i>
+				info@ssperforimingarts.co.uk
+			</a>
+		</div>
 	</section>
 
 	<section class="container">
-		<img src="{{ class.thumbnail.src|resize(972, 327) }}" alt="{{ class.thumbnail.alt }}">
-
-		<p>{{ class.description }}</p>
+		<div>
+			<img
+					class="single-class__feature"
+					src="{{ class.thumbnail.src|resize(1600, 500) }}"
+					alt="{{ class.thumbnail.alt }}"
+					width="1600"
+					height="500"
+					loading="lazy"
+			>
+			<div class="single-class__meta">
+				<div class="single-class__meta__description">{{ class.description }}</div>
+				<div class="single-class__meta__options">
+					<span>Enrolment options</span>
+					<div>
+						<div>
+							<i class="far fa-calendar-alt"></i>
+							<span>Pay as you go per session</span>
+						</div>
+						<div>
+							<i class="far fa-calendar-alt"></i>
+							<span>Termly</span>
+						</div>
+						<div>
+							<i class="far fa-calendar-alt"></i>
+							<span>Yearly</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
-	<section class="container">
-		{% if class.key_information is not empty %}
-			<h2>Key Information</h2>
-			<ul>
-				{% for item in class.key_information %}
-					<li>
-						<i class="{{ item.information_icon.value }}"></i>
-						<p>{{ item.information_content }}</p>
-					</li>
-				{% endfor %}
-			</ul>
-		{% endif %}
-	</section>
+	{% if class.key_information is not empty %}
+		<section class="container">
+			<div class="single-class__key-information">
+				<h2>Key Information</h2>
+				<ul>
+					{% for item in class.key_information %}
+						<li>
+							<i class="{{ item.information_icon.value }}"></i>
+							<div>{{ item.information_content }}</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</section>
+	{% endif %}
 
-	<section class="container">
-		{% if class.session_focus is not empty %}
+	{% if class.session_focus is not empty %}
+		<section class="container">
 			<h2>Session Focus</h2>
 			<ul>
 				{% for item in class.session_focus %}
 					<li>
 						<span title="{{ item.focus_icon.label }}">{{ item.focus_icon.value }}</span>
-						<h3>{{ item.focus_title}}</h3>
+						<h3>{{ item.focus_title }}</h3>
 						<p>{{ item.focus_content }}</p>
 					</li>
 				{% endfor %}
 			</ul>
-		{% endif %}
-	</section>
+		</section>
+	{% endif %}
+
 
 	<section class="container">
 		{% if class.course_information is not empty %}
@@ -60,8 +96,11 @@
 		<h2>Enrolment options</h2>
 	</section>
 
-	<section>
+	<section class="class-help">
 		<h2>Need help choosing an option?</h2>
+		<a href="">
+			Get in touch with us
+		</a>
 	</section>
 
 {% endblock %}

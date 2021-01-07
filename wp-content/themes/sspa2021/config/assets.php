@@ -4,7 +4,7 @@ namespace Config;
 
 class Scripts
 {
-    private $ASSET_VERSION = 1.3;
+    private $ASSET_VERSION = 1.4;
 
     public function __construct()
     {

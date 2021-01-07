@@ -1,5 +1,5 @@
 .login-label {
-  font-size: var(--sm);
+
   color: var(--white) !important;
 
   &-blue {
@@ -9,4 +9,8 @@
   &:hover {
     color: var(--sspa-blue) !important;
   }
+}
+
+.cart-icon {
+  font-size: var(--sm);
 }

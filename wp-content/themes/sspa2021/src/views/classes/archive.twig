@@ -1,0 +1,24 @@
+{% extends "layouts/app.twig" %}
+
+{% block content %}
+
+	<section class="container">
+
+		{% if classes is not empty %}
+			<h1>Available classes</h1>
+
+			{% for class in classes %}
+				<a href="{{ class.link }}">
+					<h2>{{ class.title }}</h2>
+				</a>
+			{% endfor %}
+
+			{% else %}
+
+			<h1>Sorry, no classes available at this time.</h1>
+
+		{% endif %}
+
+	</section>
+
+{% endblock %}

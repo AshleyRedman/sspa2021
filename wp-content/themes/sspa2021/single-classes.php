@@ -12,14 +12,17 @@ use Rareloop\Lumberjack\Http\Responses\TimberResponse;
  */
 class SingleClassesController extends Controller
 {
+    /**
+     * @return TimberResponse
+     * @throws \Rareloop\Lumberjack\Exceptions\TwigTemplateNotFoundException
+     */
     public function handle() : TimberResponse
     {
         $context = Timber::get_context();
         $context['class'] = new SSPAClass();
-//        dump($context);
-//        die();
-
         $product = $context['class']->product;
+        $enrollment = new Enrollment();
+        $context['available_classes'] =  $enrollment->getAvailableVariations($product);
 
         return new TimberResponse('classes/single.twig', $context);
     }

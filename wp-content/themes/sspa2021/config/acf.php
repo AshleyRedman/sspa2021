@@ -38,3 +38,22 @@ function my_acf_settings_show_admin($show_admin): bool
 }
 
 add_filter('acf/settings/show_admin', 'my_acf_settings_show_admin');
+
+/**
+ * Register theme options page
+ */
+if ( function_exists( 'acf_add_options_page' ) ) {
+    acf_add_options_page( [
+        'page_title' => 'Theme Options',
+        'menu_title' => 'Theme Options',
+        'menu_slug' => 'theme-options-page',
+        'capability' => 'edit_posts',
+        'parent_slug' => '',
+        'position' => 75,
+        'icon_url' => false,
+        'redirect' => false,
+        'post_id' => 'options',
+        'autoload' => false,
+        'update_button' => 'Update',
+    ] );
+}

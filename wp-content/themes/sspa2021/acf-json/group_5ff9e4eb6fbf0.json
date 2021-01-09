@@ -1,0 +1,43 @@
+{
+    "key": "group_5ff9e4eb6fbf0",
+    "title": "Theme Options: Store Notice",
+    "fields": [
+        {
+            "key": "field_5ff9e4f9c836c",
+            "label": "Store Notice",
+            "name": "store_notice",
+            "type": "wysiwyg",
+            "instructions": "Display a message in the navigation bar as a global store notice.\r\nThis can be useful for displaying a discount code or similar.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options-page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1610213025
+}

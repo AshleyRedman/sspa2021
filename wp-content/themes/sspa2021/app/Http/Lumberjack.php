@@ -40,6 +40,8 @@ class Lumberjack extends LumberjackCore
             'theme_location' => 'socket-menu'
         ]);
 
+        $context['store_notice'] = get_field('store_notice', 'option');
+
         return $context;
     }
 }

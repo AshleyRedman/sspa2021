@@ -6,6 +6,7 @@
 
 .menu-parent {
   position: relative;
+  padding: 1rem 0;
 
   &:hover {
 
@@ -16,5 +17,5 @@
 }
 
 .menu-item {
-  padding: 1rem 0.85rem;
+  padding: 0 0.85rem;
 }

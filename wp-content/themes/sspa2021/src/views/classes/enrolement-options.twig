@@ -1,0 +1,20 @@
+{% if available_classes is not empty %}
+	<section class="container">
+		<h2>Enrolment options</h2>
+		{% for ac in available_classes  %}
+			<p>{{ ac.name }}</p>
+			{% if ac.has_dates %}
+				<p>{{ ac.start_date }}</p> - <p>{{ ac.end_date }}</p>
+			{% endif %}
+
+			<p>{{ ac.attributes['pa_class-payment-length']|capitalize|replace({'-':' '}) }}</p>
+
+			<form action="/basket/{{ ac.parent_id }}/variation/{{ ac.variation_id }}" method="post">
+
+				<input type="submit" value="Add">
+
+			</form>
+
+		{% endfor %}
+	</section>
+{% endif %}

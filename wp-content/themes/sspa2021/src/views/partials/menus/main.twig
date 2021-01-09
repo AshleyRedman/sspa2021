@@ -1,6 +1,6 @@
 {% if main_menu %}
 	<nav>
-		<ul class="menu">
+		<ul class="menu main-menu">
 		{% for item in main_menu.items  %}
 			<li class="menu-parent">
 				<a href="{{ item.link }}" class="{{ item.classes | join(' ') }}" target="{{ item.target }}">

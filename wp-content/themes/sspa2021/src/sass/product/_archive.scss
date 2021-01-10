@@ -1,0 +1,44 @@
+.before-shop-loop {}
+
+.product-loop {
+  display: grid;
+  clear: both;
+  gap: 1rem;
+  grid-template-columns: 100%;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.product-loop .product-tease .product-tease__image_parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.product-loop .product-tease .button {
+  display: block;
+  margin: 1rem auto 0;
+  width: max-content;
+}
+
+.product-tease__name,
+.product-tease__price {
+  display: block;
+  text-align: center;
+}
+
+.regular_price {
+  text-decoration: line-through;
+}

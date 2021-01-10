@@ -46,4 +46,18 @@ class Product
 
         return $products;
     }
+
+    public function getRelatedProducts(\WC_Product $product) : array
+    {
+        $woo_products = wc_get_related_products($product->ID);
+
+        $related = [];
+        if (!empty($woo_products)) {
+            foreach ($woo_products as $id) {
+                $related[] = $this->setProduct(new Post($id));
+            }
+        }
+
+        return $related;
+    }
 }

@@ -9,7 +9,7 @@
 			{% do action('woocommerce_before_shop_loop') %}
 		</div>
 
-		<div class="loop">
+		<div class="product-loop">
 			{% for product in products  %}
 				{% include ["product/tease-product.twig"] %}
 			{% endfor %}

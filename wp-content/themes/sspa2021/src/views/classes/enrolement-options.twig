@@ -9,11 +9,7 @@
 
 			<p>{{ ac.attributes['pa_class-payment-length']|capitalize|replace({'-':' '}) }}</p>
 
-			<form action="/basket/{{ ac.parent_id }}/variation/{{ ac.variation_id }}" method="post">
-
-				<input type="submit" value="Add">
-
-			</form>
+			<a href="{{ cart_url }}?add-to-cart={{ ac.variation_id }}" class="button">Add to basket</a>
 
 		{% endfor %}
 	</section>

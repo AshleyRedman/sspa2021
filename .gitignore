@@ -17,7 +17,7 @@ wp-content/*
 !wp-content/mu-plugins
 wp-content/mu-plugins/*
 !wp-content/mu-plugins/.gitkeep
-!wp-content/plugins/my-mu-plugin
+!wp-content/mu-plugins/log-to-debug-file.php
 
 # Ignore all plugins except specified ones
 !wp-content/plugins

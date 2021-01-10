@@ -1,6 +1,6 @@
 {
     "key": "group_5ff9e4eb6fbf0",
-    "title": "Theme Options: Store Notice",
+    "title": "Theme Options",
     "fields": [
         {
             "key": "field_5ff9e4f9c836c",
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1610213025
+    "modified": 1610308083
 }

@@ -18,18 +18,20 @@ use Rareloop\Lumberjack\Post;
 use Timber\Term;
 use Timber\Timber;
 
-class ArchiveProductController extends Controller
+class TaxonomyProductCatController extends Controller
 {
     public function handle() : TimberResponse
     {
         $data = Timber::get_context();
 
+        $query = get_queried_object();
+
+
         $product = new Product();
+        $data['products'] = $product->getProductsByTerm(new Term($query->slug));
 
-        $data['products'] = $product->getProductsByTerm(new Term('clothing'));
-
-        dump($data['products']);
-        die();
+//        dump($data);
+//        die();
 
         return new TimberResponse('product/archive.twig', $data, 200);
     }

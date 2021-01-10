@@ -10,10 +10,17 @@ class BasketController extends BaseController
 
     public function addToBasket(ServerRequest $request, $productId, $variationId)
     {
-        global $woocommerce;
-        $woocommerce->cart->add_to_cart($productId, 1, $variationId);
+//        dump($productId, $variationId);
+//        die();
 
-        wp_safe_redirect(wc_get_cart_url(), '302', 'WordPress');
+//        // good up to here
+//
+//        global $woocommerce;
+//        $woocommerce->cart->add_to_cart($productId, 1, $variationId);
+//
+//        //
+//
+//        wp_safe_redirect(wc_get_cart_url(), '302', 'WordPress');
     }
 
 }
